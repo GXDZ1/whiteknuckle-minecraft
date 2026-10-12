@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "whiteknucklemc",
+  "version": "${version}",
+  "name": "White Knuckle Minecraft",
+  "description": "A Minecraft mod that implements White Knuckle climbing mechanics - manage stamina and grip while climbing vertical surfaces",
+  "authors": [
+    "YourNameHere"
+  ],
+  "contact": {
+    "homepage": "https://github.com/yourusername/whiteknuckle-minecraft",
+    "sources": "https://github.com/yourusername/whiteknuckle-minecraft"
+  },
+  "license": "MIT",
+  "icon": "assets/whiteknucklemc/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "com.example.whiteknucklemc.WhiteknuckleMinecraftMod"
+    ]
+  },
+  "depends": {
+    "fabricloader": ">=0.14.0",
+    "fabric": "*",
+    "minecraft": ">=1.20.1"
+  },
+  "recommends": {
+    "flamingo": "*"
+  }
+}

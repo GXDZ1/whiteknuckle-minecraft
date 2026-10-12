@@ -1,0 +1,49 @@
+plugins {
+    id 'fabric-loom' version '1.4.+'
+}
+
+repositories {
+    mavenCentral()
+    maven { url = 'https://maven.fabricmc.net/' }
+}
+
+dependencies {
+    minecraft "com.mojang:minecraft:${version_minecraft}"
+    mappings "net.fabricmc:yarn:${version_mappings}:v2"
+    modImplementation "net.fabricmc.fabric-api:fabric-api:${version_fabric_api}"
+    // Add White Knuckle as a dependency if available as a mod
+    // modImplementation "com.example:whiteknuckle:${version_whiteknuckle}"
+}
+
+processResources {
+    // This ensures that the mods.toml file is copied correctly
+    from(sourceSets.main.resources.srcDirs) {
+        include 'fabric.mod.json'
+        // Uncomment the next line if you want to include any additional resources
+        // include 'assets/**'
+    }
+
+    // Replace placeholders in fabric.mod.json
+    expand 'version': project.version, 'mcversion': version_minecraft
+}
+
+java {
+    // Enables Java 17 or higher (required for Fabric 0.14+)
+    sourceCompatibility = JavaVersion.VERSION_17
+    targetCompatibility = JavaVersion.VERSION_17
+}
+
+minecraft {
+    // These values can be overridden by specifying '-Pversion_num=X.Y.Z' etc.
+    version = project.hasProperty('version_num') ? project.property('version_num') : "1.20.1"
+    mappings = project.hasProperty('mappings_num') ? project.property('mappings_num') : "1.20.1"
+    yarn = project.hasProperty('yarn_build') ? project.property('yarn_build') : 4
+    // Uncomment the next line if you want to use the official Mojang mappings
+    // officialMojang = true
+}
+
+runDir = "run"
+
+// The rest of the configuration is automatically added by the fabric-loom plugin.
+// For more information on the fabric-loom plugin, see:
+// https://github.com/FabricMC/fabric-loom

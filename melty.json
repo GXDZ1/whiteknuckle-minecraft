@@ -1,0 +1,56 @@
+{
+  "name": "White Knuckle Minecraft",
+  "slug": "whiteknucklemc",
+  "version": "1.0.0",
+  "description": "A Minecraft Fabric mod implementing climbing mechanics where players manage stamina and grip while climbing vertical surfaces",
+  "author": "Mod Developer",
+  "contact": {},
+  "repository": "",
+  "license": "MIT",
+  "gameSlugs": [
+    "minecraft-java"
+  ],
+  "tags": [
+    "climbing",
+    "stamina",
+    "grip",
+    "mechanics",
+    "fabric"
+  ],
+  "website": "",
+  "source": "",
+  "issueTracker": "",
+  "donate": "",
+  "files": [
+    {
+      "name": "whiteknucklemc-1.0.0.jar",
+      "url": "",
+      "hash": "",
+      "size": 0,
+      "env": "client",
+      "required": true,
+      "version": "1.0.0",
+      "gameVersion": "1.20.1",
+      "loaderVersion": "0.14.+",
+      "loaders": [
+        "fabric"
+      ],
+      "title": "White Knuckle Minecraft",
+      "description": "A Minecraft Fabric mod implementing climbing mechanics where players manage stamina and grip while climbing vertical surfaces",
+      "dependencies": [],
+      "incompatibilities": []
+    }
+  ],
+  "clientOnly": true,
+  "supportedVersions": [
+    "1.20.1"
+  ],
+  "supportedLoaders": [
+    "fabric"
+  ],
+  "dependencies": [],
+  "recommendations": [],
+  "suggestions": [],
+  "conflicts": [],
+  "breakers": []
+}
